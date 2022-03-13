@@ -1,0 +1,14 @@
+{% macro displayQuoteList(quote_list) %}
+
+    {% for quote in quote_list %}
+        <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 movie-card">
+            
+            <li class="text-center">
+                <a href="/quote/{{quote.id}}">
+                    {{ quote.author|truncate(10)}}</a>
+            </li>
+        </div>
+
+    {% endfor %}
+
+{% endmacro %}
